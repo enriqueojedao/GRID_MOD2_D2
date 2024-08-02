@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "sidebar main main"
+        "footer footer footer";
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-rows: auto;
+}
+
+.header {
+    grid-area: header;
+    background-color: #ffffff;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    color: azure;
+}
+
+.header .logo {
+    max-height: 3rem;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: rgb(64, 59, 59);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.main {
+    grid-area: main;
+    background-color: rgb(64, 59, 59);
+    padding: 15px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3%;
+    padding: 20px;
+}
+
+.product-card {
+    border: 1px solid #ffffff;
+    background-color: #e9ecef;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    margin-bottom: 10px;
+}
+
+.product-card .price {
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.product-card button {
+    width: 100%;
+    padding: 0.5em;
+    background-color: #0007d0;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.product-card button:hover {
+    background-color: #95c2f2;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #ffffff;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer-link {
+    color: #000000;
+    text-decoration: solid;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    color: #09119b;
+    font-weight: bold;
+}
+
+.category-number {
+    color: #888888;
+    font-size: 0.9em;
+}
